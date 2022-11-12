@@ -1,0 +1,6 @@
+<%= form_with model:genre, url: url do |f| %>
+	<%= render 'user/shared/error_messages', resource: genre %>
+	<%= f.label :name, "ジャンル名:" %>
+	<%= f.text_field :name %>
+	
+<% end %>

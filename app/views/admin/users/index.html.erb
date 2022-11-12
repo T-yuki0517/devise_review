@@ -1,0 +1,18 @@
+<section class="inner">
+	<h2 class="section-ttl">会員一覧</h2>
+	<table class="admin_user_index has_border">
+	<thead>
+		<th>会員ID</th>
+		<th>名前</th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.name %></td>
+				<td><%= link_to "詳細", admin_user_path(user), class: "btn btn-primary" %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</section>

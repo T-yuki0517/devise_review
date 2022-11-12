@@ -1,0 +1,13 @@
+<h2 class="section-ttl">最新の投稿</h2>
+<div class="post_images">
+	<% @post_images.each do |post_image| %>
+  <div>
+    <%= link_to post_image_path(post_image.id) do %>
+      <p><%= image_tag post_image.user.get_profile_image(50,50) %></p>
+    <% end %>
+    <p>デバイス名：<%= post_image.devise_name %></p>
+    <p>説明：<%= post_image.caption %></p>
+    <p>ユーザーネーム：<%= post_image.user.name %></p>
+  </div>
+  <% end %>
+</div>
